@@ -6,5 +6,5 @@ public interface ViewInterface {
 
   void showPortfolioComposition(Portfolio portfolio);
 
-  void showPortfolioValuation(Portfolio portfolio,Float value);
+  void showPortfolioValuation(Float value);
 }
