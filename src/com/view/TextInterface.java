@@ -1,4 +1,4 @@
-package com.company.view;
+package com.view;
 
 public class TextInterface {
 
