@@ -6,7 +6,7 @@ import java.util.Map;
 
 public interface Model {
 
-  void createPortfolio(Map<String,Integer> stockMap);
+  void createPortfolio(Map<String, Integer> stockMap);
 
   Float getPortfolioValuation(Date date);
 

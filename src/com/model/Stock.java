@@ -1,6 +1,6 @@
 package com.model;
 
-public class Stock implements StockInterface {
+public class Stock implements IStock {
 
   private String tickerSymbol;
 
