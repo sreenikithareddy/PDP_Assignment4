@@ -3,6 +3,7 @@ package com.controller.features;
 import com.controller.constants.StockMarketConstants;
 import com.model.Model;
 import com.view.IView;
+import java.io.IOException;
 import java.util.HashMap;
 import java.util.Scanner;
 
@@ -17,7 +18,7 @@ public class CreatePortfolio extends AbstractFeature {
 
 
   @Override
-  public void runFeature() {
+  public void runFeature() throws IOException {
     this.processInput(this.scanner);
     String name = acceptPortfolioName(true);
     model.createPortfolio(this.stockMap, name,new HashMap<>(StockMarketConstants.tickerMap));

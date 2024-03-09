@@ -7,6 +7,7 @@ import com.controller.input.AcceptInput;
 import com.model.Model;
 import com.model.Portfolio;
 import com.view.IView;
+import java.io.IOException;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Scanner;
@@ -40,7 +41,7 @@ public class StockDataControllerImpl extends AcceptInput implements StockDataCon
   }
 
   @Override
-  public void go() {
+  public void go() throws IOException {
     while (true) {
       System.out.println(
           "Please enter a choice from the following \n 1. create portfolio (create) \n 2. examine portfolio (examine) \n 3. get valuation of portfolio (valuate) \n 4.Quit the program (Q) :");
