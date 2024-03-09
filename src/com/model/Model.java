@@ -12,7 +12,7 @@ public interface Model {
    * @param stockMap a map of ticker symbols and quantity of each stock to be added as part of a
    *                 portfolio.
    */
-  void createPortfolio(Map<String, Integer> stockMap,String portfolioName);
+  void createPortfolio(Map<String, Integer> stockMap,String portfolioName,Map<String,String> tickerMap);
 
   /**
    * Function utilized to get the valuation of a portfolio.

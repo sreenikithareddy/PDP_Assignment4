@@ -2,25 +2,25 @@ package com.controller.features;
 
 import com.controller.constants.StockMarketConstants;
 import com.model.Model;
+import com.view.IView;
 import java.util.HashMap;
 import java.util.Scanner;
 
 public class CreatePortfolio extends AbstractFeature {
 
-  private final Model model;
-
   private final HashMap<String, Integer> stockMap;
 
-  public CreatePortfolio(Model model, HashMap<String, Integer> stockMap) {
-    this.model = model;
-    this.stockMap = stockMap;
+  public CreatePortfolio(Model model, IView view, Scanner scanner) {
+    super(model, view, scanner);
+    this.stockMap = new HashMap<>();
   }
+
 
   @Override
   public void runFeature() {
     this.processInput(this.scanner);
-    String name = getPortfolioName();
-    model.createPortfolio(this.stockMap,name);
+    String name = acceptPortfolioName(true);
+    model.createPortfolio(this.stockMap, name,new HashMap<>(StockMarketConstants.tickerMap));
   }
 
   @Override
@@ -54,22 +54,4 @@ public class CreatePortfolio extends AbstractFeature {
     }
   }
 
-  private String getPortfolioName()
-  {
-    while (true)
-    {
-      try {
-        System.out.println("Please enter a name for the portfolio : ");
-        String name = scanner.nextLine();
-        if (!name.isBlank() && !name.isEmpty())
-        {
-          return name;
-        }
-      }
-      catch (Exception e)
-      {
-        System.out.println("An exception occured :" + e.getMessage() + "please enter a valid string name");
-      }
-    }
-  }
 }

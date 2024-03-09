@@ -2,7 +2,7 @@ package com.view;
 
 import com.model.Portfolio;
 
-public interface ViewInterface {
+public interface IView {
 
   void showPortfolioComposition(Portfolio portfolio);
 

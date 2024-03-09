@@ -6,6 +6,5 @@ public abstract class AcceptInput {
 
   protected void processInput(Scanner scanner) {
     System.out.println("Select one of the following options");
-
   }
 }

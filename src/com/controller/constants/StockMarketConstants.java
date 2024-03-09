@@ -5,5 +5,5 @@ import java.util.Map;
 public class StockMarketConstants {
 
   // need to make this map final....
-  public static Map<String,Integer> tickerMap;
+  public static Map<String,String> tickerMap;
 }
