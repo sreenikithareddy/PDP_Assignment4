@@ -6,7 +6,7 @@ import java.util.Map;
 public class ModelImpl implements Model {
 
   @Override
-  public void createPortfolio(Map<String, Integer> stockMap, String portfolioName) {
+  public void createPortfolio(Map<String, Integer> stockMap, String portfolioName,Map<String,String> tickerMap) {
   }
 
   @Override
