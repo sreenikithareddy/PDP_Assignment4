@@ -2,34 +2,24 @@ package com.controller.features;
 
 import com.controller.constants.StockMarketConstants;
 import com.model.Model;
+import com.view.IView;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Scanner;
 
 public class CreatePortfolio extends AbstractFeature {
 
-  private final Model model;
-
   private final HashMap<String, Integer> stockMap;
 
-  public CreatePortfolio(Model model, HashMap<String, Integer> stockMap) {
-    this.model = model;
-    this.stockMap = stockMap;
+  public CreatePortfolio(Model model, IView view, Scanner scanner) {
+    super(model, view, scanner);
+    this.stockMap = new HashMap<>();
   }
+
 
   @Override
   public void runFeature() {
-    String name;
     this.processInput(this.scanner);
-    List<String> portfolioNames = fetchPortfolioList();
-      while (true) {
-        name = getPortfolioName();
-        if (!portfolioNames.contains(name)) {
-          break;
-        } else {
-          System.out.println("There is a already a portfolio with name"+ name + "please enter a different name");
-        }
-      }
+    String name = acceptPortfolioName(true);
     model.createPortfolio(this.stockMap, name,new HashMap<>(StockMarketConstants.tickerMap));
   }
 
