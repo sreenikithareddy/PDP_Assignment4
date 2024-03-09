@@ -1,6 +1,6 @@
 package com.model;
 
-public interface StockInterface {
+public interface IStock {
 
   void setTickerSymbol(String tickerSymbol);
 

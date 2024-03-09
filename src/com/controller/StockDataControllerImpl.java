@@ -1,5 +1,6 @@
 package com.controller;
 
+import com.controller.input.AcceptInput;
 import com.model.Model;
 import com.model.Portfolio;
 import com.view.ViewInterface;
@@ -7,7 +8,7 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Scanner;
 
-public class StockDataControllerImpl implements StockDataController {
+public class StockDataControllerImpl extends AcceptInput implements StockDataController {
 
   private Scanner inputScanner;
 
