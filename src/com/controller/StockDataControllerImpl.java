@@ -53,7 +53,7 @@ public class StockDataControllerImpl extends AcceptInput implements StockDataCon
                   "The ticker symbol you entered is not present, please enter a correct one");
             }
           }
-          model.createPortfolio(stockMap);
+          //model.createPortfolio(stockMap);
           break;
 
         case 2:
@@ -69,8 +69,8 @@ public class StockDataControllerImpl extends AcceptInput implements StockDataCon
               "Please enter a date on which you wish to check the valuation of the portfolio in YYYY-MM-DD format");
           String dateString = inputScanner.nextLine();
           Date date = new Date(dateString);
-          float x = model.getPortfolioValuation(date);
-          viewInterface.showPortfolioValuation(x);
+          //float x = model.getPortfolioValuation(date);
+          //viewInterface.showPortfolioValuation(x);
           break;
 
         case 4:
