@@ -6,11 +6,11 @@ import java.util.Map;
 public class ModelImpl implements Model {
 
   @Override
-  public void createPortfolio(Map<String, Integer> stockMap) {
+  public void createPortfolio(Map<String, Integer> stockMap, String portfolioName) {
   }
 
   @Override
-  public Float getPortfolioValuation(Date date) {
+  public Float getPortfolioValuation(String portfolioName, Date date) {
     return null;
   }
 
